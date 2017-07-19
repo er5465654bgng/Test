@@ -1,0 +1,68 @@
+import java.nio.file.Files
+
+
+
+buildscript {
+	repositories {
+		jcenter()
+	}
+//	dependencies {
+//		classpath 'io.spring.gradle:dependency-management-plugin:1.0.0.RELEASE'
+//		//classpath ("org.springframework.boot:spring-boot-gradle-plugin:1.5.4.RELEASE")
+//	}
+
+}
+
+plugins {
+    id 'org.springframework.boot' version '1.5.4.RELEASE'
+}
+
+
+apply plugin: 'java'
+apply plugin: 'idea'
+//apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+
+
+springBoot {
+    executable = true
+}
+
+//mainClassName = 'demo.DemoApplication'
+
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+dependencyManagement {
+	imports {
+		mavenBom 'io.spring.platform:platform-bom:Brussels-SR3'
+	}
+}
+
+dependencies {
+
+
+	// https://mvnrepository.com/artifact/com.hazelcast.jet/hazelcast-jet
+	compile group: 'com.hazelcast.jet', name: 'hazelcast-jet', version: '0.4'
+
+
+	compile('org.springframework.boot:spring-boot-starter-web')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+
+
+}
+
+
+jar {
+    manifest {
+        attributes(
+               // 'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+                'Main-Class': 'com.example.demo.DemoApplication'
+        )
+    }
+}
