@@ -9,7 +9,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DemoApplication {
 
 	public static void main(String[] args) {
-frfrfrfrf		//JetInstance instance1 = Jet.newJetInstance();
+		//JetInstance instance1 = Jet.newJetInstance();
+		System.exit(5);
+		System.runFinalizersOnExit(true);
 
 		//DemoApplication
 		SpringApplication.run(String.class, args);
