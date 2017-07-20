@@ -13,6 +13,13 @@ public class DemoApplication {
 		System.exit(5);
 		System.runFinalizersOnExit(true);
 
+		//Second
+		System.getProperties();
+
+		// working with "dev" branch
+		System.out.println("dev");
+
+
 		//DemoApplication
 		SpringApplication.run(String.class, args);
 	}
