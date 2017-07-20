@@ -17,7 +17,7 @@ public class DemoApplication {
 		System.getProperties();
 
 		// working with "dev" branch
-		System.out.println("dev. Hi!");
+		System.out.println("dev. Hi! 12345");
 
 
 		//DemoApplication
