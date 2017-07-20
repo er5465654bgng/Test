@@ -17,8 +17,7 @@ public class DemoApplication {
 		System.getProperties();
 
 		// working with "dev" branch
-		System.out.println("dev. Hi! 12345 It's Mak");
-
+		System.out.println("dev. Hi! 12345  It's Silk and Mak");
 
 		//DemoApplication
 		SpringApplication.run(String.class, args);
