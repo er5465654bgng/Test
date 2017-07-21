@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DemoApplication {
 
 	public static void main(String[] args) {
-		//VIP DEV!!!
+		//VIP DEV!!! !!!!
 		//JetInstance instance1 = Jet.newJetInstance();
 		System.exit(5);
 		System.runFinalizersOnExit(true);
